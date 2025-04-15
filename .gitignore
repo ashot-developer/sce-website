@@ -1,0 +1,9 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Optional: you can also add logs, temporary files, etc.
+npm-debug.log
+yarn-error.log
