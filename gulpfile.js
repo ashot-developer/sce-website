@@ -14,18 +14,32 @@ const paths = {
     dest: 'dist/'
   },
   styles: {
-    src: 'src/scss/**/*.scss',
+    src: 'src/scss/style.scss',
+    watch: 'src/scss/**/*.scss',
     dest: 'dist/css/'
   },
   scripts: {
     src: 'src/js/**/*.js',
     dest: 'dist/js/'
+  },
+  images: {
+    src: 'src/assets/images/**/*',
+    dest: 'dist/assets/images/'
+  },
+  fonts: {
+    src: 'src/assets/fonts/**/*',
+    dest: 'dist/assets/fonts/'
+  },
+  videos: {
+    src: 'src/assets/videos/**/*',
+    dest: 'dist/assets/videos/'
   }
 };
 
 // HTML
 function html() {
-  return gulp.src(['src/html/**/*.html', '!src/html/parts/**']) // exclude partials
+  console.log('Processing HTML...');
+  return gulp.src(['src/html/**/*.html', '!src/html/parts/**'])
     .pipe(fileInclude({
       prefix: '@@',
       basepath: '@file'
@@ -37,11 +51,9 @@ function html() {
 // Styles
 function styles() {
   console.log('Compiling SCSS...');
-  return gulp.src('src/scss/style.scss')
+  return gulp.src(paths.styles.src)
     .pipe(sourcemaps.init())
-    .pipe(sass({
-      includePaths: ['node_modules']
-    }).on('error', sass.logError))
+    .pipe(sass({ includePaths: ['node_modules'] }).on('error', sass.logError))
     .pipe(cleanCSS())
     .pipe(rename({ basename: 'style', suffix: '.min' }))
     .pipe(sourcemaps.write('.'))
@@ -49,9 +61,9 @@ function styles() {
     .pipe(browserSync.stream());
 }
 
-
 // Scripts
 function scripts() {
+  console.log('Processing JS...');
   return gulp.src(paths.scripts.src)
     .pipe(sourcemaps.init())
     .pipe(uglify())
@@ -61,18 +73,48 @@ function scripts() {
     .pipe(browserSync.stream());
 }
 
+// Images
+function images() {
+  console.log('Moving Images...');
+  return gulp.src(paths.images.src)
+    .pipe(gulp.dest(paths.images.dest))
+    .pipe(browserSync.stream());
+}
+
+// Fonts
+function fonts() {
+  console.log('Moving Fonts...');
+  return gulp.src(paths.fonts.src)
+    .pipe(gulp.dest(paths.fonts.dest))
+    .pipe(browserSync.stream());
+}
+
+// Videos
+function videos() {
+  console.log('Moving Videos...');
+  return gulp.src(paths.videos.src)
+    .pipe(gulp.dest(paths.videos.dest))
+    .pipe(browserSync.stream());
+}
+
 // Serve
 function serve() {
   browserSync.init({
     server: {
       baseDir: './dist'
     }
-  });
+  }, () => console.log('BrowserSync started at http://localhost:3000'));
+
   gulp.watch(paths.html.src, html);
-  gulp.watch(paths.styles.src, styles);
+  gulp.watch(paths.styles.watch, styles);
   gulp.watch(paths.scripts.src, scripts);
+  gulp.watch(paths.images.src, images);
+  gulp.watch(paths.fonts.src, fonts);
+  gulp.watch(paths.videos.src, videos);
 }
 
-const build = gulp.series(gulp.parallel(html, styles, scripts), serve);
+// Build task
+const build = gulp.series(gulp.parallel(html, styles, scripts, images, fonts, videos), serve);
 
+// Export
 exports.default = build;
