@@ -22,6 +22,7 @@
             letter-spacing: 2.8px;
             text-transform: uppercase;
             margin-bottom: 8px;
+            color: $medium-black;
           }
           a {
             font-weight: 500;
@@ -29,7 +30,7 @@
             line-height: 26px;
             letter-spacing: 0.3px;
             text-decoration: none;
-            color: $black;
+            color: $medium-black;
             &:hover {
               color: $green;
             }

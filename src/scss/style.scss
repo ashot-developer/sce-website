@@ -9,6 +9,7 @@
 @use './parts/press';
 @use './pages/home';
 @use './pages/contact';
+@use './parts/contact-form-popup';
 
 * {
   font-family: $font-primary;

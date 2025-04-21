@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
+  MicroModal.init();
+
+  // Mobile menu toggle
   document.querySelector('.header-toggle--btn').addEventListener('click', function () {
     let el = this;
 
@@ -41,4 +44,10 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
+  // Contact form success popup
+  const submitBtn = document.querySelector('.contact-form__form .sce-btn');
+  submitBtn.addEventListener('click', function(e){
+    e.preventDefault();
+    MicroModal.show('cf7-modal');
+  })
 })

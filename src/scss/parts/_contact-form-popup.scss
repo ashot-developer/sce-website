@@ -1,0 +1,118 @@
+@use './base/vars' as *;
+.modal {
+  &[aria-hidden="true"] {
+    display: none;
+  }
+
+  &[aria-hidden="false"] {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+  }
+
+  &__overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+  }
+
+  &__container {
+    background: $white;
+    max-width: 500px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: scale(0.9);
+    animation: zoomIn 0.3s forwards;
+    min-height: 355px;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -0.64px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 20px;
+  }
+
+  &__content {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+    text-align: center;
+  }
+}
+
+// Animations
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: $tablet-small-screen) {
+  #cf7-modal {
+    .modal__container {
+      margin: 20px;
+      min-height: 300px;
+      padding: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-screen) {
+  #cf7-modal {
+    .modal__container {
+      .modal__title {
+        font-size: 25px;
+        line-height: 28px;
+        margin-top: 0;
+      }
+      .modal__icon {
+        svg {
+          width: 70px;
+        }
+      }
+      .modal__content {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
