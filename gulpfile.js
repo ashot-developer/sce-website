@@ -6,6 +6,7 @@ const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 const fileInclude = require('gulp-file-include');
+const copy = require('gulp-copy');
 
 // Paths
 const paths = {
@@ -27,12 +28,12 @@ const paths = {
     dest: 'dist/assets/images/'
   },
   fonts: {
-    src: 'src/assets/fonts/**/*',
-    dest: 'dist/assets/fonts/'
+    src: 'src/assets/fonts/**/*.{woff,woff2,ttf,eot,otf}',
+    dest: 'dist/assets/'
   },
   videos: {
     src: 'src/assets/videos/**/*',
-    dest: 'dist/assets/videos/'
+    dest: 'dist/assets/'
   }
 };
 
@@ -85,16 +86,14 @@ function images() {
 function fonts() {
   console.log('Moving Fonts...');
   return gulp.src(paths.fonts.src)
-    .pipe(gulp.dest(paths.fonts.dest))
-    .pipe(browserSync.stream());
+    .pipe(copy(paths.fonts.dest, { prefix: 2 }))
 }
 
 // Videos
 function videos() {
   console.log('Moving Videos...');
   return gulp.src(paths.videos.src)
-    .pipe(gulp.dest(paths.videos.dest))
-    .pipe(browserSync.stream());
+    .pipe(copy(paths.videos.dest, { prefix: 2 }))
 }
 
 // Serve

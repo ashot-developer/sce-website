@@ -1,5 +1,14 @@
 @use 'reset' as *;
+@use './base/vars' as *;
+@use './base/fonts';
+@use './base/general';
 @use './components/button';
 @use './components/heading';
-@use 'header';
-@use 'footer';
+@use './parts/header';
+@use './parts/footer';
+@use './parts/press';
+@use './pages/home';
+
+* {
+  font-family: $font-primary;
+}

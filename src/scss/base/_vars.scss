@@ -4,11 +4,20 @@ $medium-black: #060B0E;
 $light-black: #151515;
 $dark-blue-black: #080A0D;
 $green: #5EDC3B;
+$green-accent: #63DB54;
 $white: #FFFFFF;
 $red: #FF0000;
 $blue: #0015FF;
+$gray: #505050;
+$granite-gray: #656565;
 
 // Breakpoints
-$noutbook-screen: 1280px;
+$noutbook-screen: 1440px;
+$noutbook-small-screen: 1280px;
+$tablet-big-screen: 991px;
 $tablet-screen: 835px;
-$mobile-screen: 395px;
+$tablet-small-screen: 768px;
+$mobile-screen: 576px;
+
+//Fonts
+$font-primary: "Articulat CF";
