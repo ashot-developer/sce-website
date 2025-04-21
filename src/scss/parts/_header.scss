@@ -36,6 +36,9 @@
         letter-spacing: 2.8px;
         text-decoration: none;
         color: $white;
+        &:hover {
+          color: $green;
+        }
       }
 
       &:not(:last-child) {
@@ -106,6 +109,28 @@
     z-index: 999;
     &.dark {
       display: none;
+    }
+  }
+
+  &.dark-header {
+    & .header-menu--item_link {
+      color: $black;
+      &:hover {
+        color: $green;
+      }
+    }
+    & .header-logo {
+      display: none;
+      &.dark {
+        display: block;
+      }
+    }
+    & .header-toggle--btn {
+      svg {
+        rect {
+          fill: $black;
+        }
+      }
     }
   }
 }

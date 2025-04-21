@@ -1,4 +1,4 @@
-@use 'reset' as *;
+@use './base/reset' as *;
 @use './base/vars' as *;
 @use './base/fonts';
 @use './base/general';
@@ -8,6 +8,7 @@
 @use './parts/footer';
 @use './parts/press';
 @use './pages/home';
+@use './pages/contact';
 
 * {
   font-family: $font-primary;

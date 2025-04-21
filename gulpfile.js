@@ -78,8 +78,7 @@ function scripts() {
 function images() {
   console.log('Moving Images...');
   return gulp.src(paths.images.src)
-    .pipe(gulp.dest(paths.images.dest))
-    .pipe(browserSync.stream());
+    .pipe(copy(paths.images.dest, { prefix:  3}))
 }
 
 // Fonts
