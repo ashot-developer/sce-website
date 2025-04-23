@@ -5,13 +5,14 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 64px;
+  flex-wrap: wrap;
   &--item {
     display: flex;
     flex-direction: column;
     max-width: 360px;
+    width: calc(33.3% - 42.6px);
     color: $black;
     &_img {
-      width: calc(100% - 40px);
       min-height: 360px;
       background-color: #0A1B5F1A;
       padding: 0 20px;
@@ -66,18 +67,12 @@
   .press-list {
     gap: 40px;
     &--item {
-      max-width: 320px;
+      width: calc(33.3% - 26.6px);
       &_img {
         min-height: 320px;
         & img {
           max-width: 207px;
         }
-      }
-      &_title {
-      }
-      &_desc {
-      }
-      &_date {
       }
     }
   }
@@ -87,7 +82,7 @@
   .press-list {
     gap: 20px;
     &--item {
-      max-width: 260px;
+      width: calc(33.3% - 13.3px);
       &_img {
         min-height: 260px;
         & img {
@@ -111,7 +106,7 @@
 @media screen and (max-width: $tablet-screen) {
   .press-list {
     &--item {
-      max-width: 220px;
+      width: calc(33.3% - 13.3px);
       &_img {
         min-height: 220px;
       }
@@ -126,6 +121,15 @@
     padding-right: 40px;
     &--item {
       max-width: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-screen) { 
+  .press-list {
+    &--item {
+      max-width: 270px;
     }
   }
 }
