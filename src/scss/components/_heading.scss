@@ -1,0 +1,61 @@
+@use '../base/vars' as *;
+.sce-heading {
+  &--main {
+    font-weight: 500;
+    font-size: 73px;
+    line-height: 80px;
+    letter-spacing: -0.3px;
+  }
+
+  &--sub {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.3px;
+  }
+
+  &--secondary {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -0.96px;
+  }
+
+  &--top {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: $tablet-screen) {
+  .sce-heading {
+    &--main {
+      font-size: 40px;
+      line-height: 48px;
+    }
+  
+    &--sub {
+      font-size: 14px;
+      line-height: 26px;
+    }
+
+    &--secondary {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: -0.96px;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-screen) {
+  .sce-heading {
+    &--main {
+      font-size: 36px;
+      line-height: 40px;   
+    }
+  }
+}

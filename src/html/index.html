@@ -1,7 +1,87 @@
 @@include('parts/header.html')
 
 <main class="home">
-  <h1>Home page!!!</h1>
+  <section class="hero">
+    <video id="ch-animation_video" playsinline autoplay muted loop preload="none">
+      <source src="./assets/videos/main-video.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="sce-heading--main">Powering the Future with Precision and Insight</h1>
+        <p class="sce-heading--sub">At Snapper Creek Energy, we combine industry-leading execution, cutting-edge data analytics, and deep market expertise to drive smarter, faster energy trading. Specializing in traditional, renewable, and transitional energy markets, we offer top-tier execution, strategic advisory, and proprietary insights to help clients capitalize on opportunities with confidence. With a dedicated focus on global natural gas, power, carbon, agricultural commodities, and natural gas liquids (NGLs) markets, we deliver the intelligence and execution needed to stay ahead in a dynamic market.</p>
+        <a class="hero-content--link" href="">LEARN MORE</a>
+      </div>
+    </div>
+  </section>
+  <section class="what-we-do">
+    <div class="container">
+      <div class="what-we-do--content">
+        <span class="sce-heading--top">WHAT WE DO</span>
+        <h2 class="sce-heading--secondary">At Snapper Creek, we operate specialized, complementary verticals aimed at delivering market advantage.</h2>
+        <p class="sce-heading--sub">
+          Snapper Creek’s seasoned team of energy industry executives leverages its in- depth research capabilities, proprietary data and analytics platform, advisory and execution services, and combined 100+ years of sector knowledge to maximize value for clients with speed and certainty.
+        </p>
+        <div class="what-we-do--list">
+          <div class="what-we-do--list_item">
+            <h3>Brokerage</h3>
+            <img src="./assets/images/brokerage.svg" alt="">
+            <p>Snapper Creek runs integrated brokerage desks focused on natural gas, power, carbon, agricultural commodities, and natural gas liquids (NGLs) markets that offer best-in-class trading execution services.</p>
+          </div>
+          <div class="what-we-do--list_item">
+            <h3>Market Analytics</h3>
+            <img src="./assets/images/analytics.svg" alt="">
+            <p>Snapper Creek harnesses advanced in-house data architecture and analytics tools to deliver high-resolution market intelligence. Our models drive transparent price discovery and actionable insights—empowering clients to make informed, real-time trading decisions with confidence.</p>
+          </div>
+          <div class="what-we-do--list_item">
+            <h3>Advisory</h3>
+            <img src="./assets/images/advistory.svg" alt="">
+            <p>With decades of expertise across traditional, renewable, and transitional energy markets, Snapper Creek delivers tailored advisory solutions in risk management. Our team leverages deep commercial insight, real-time market data, and structured analytics to help clients optimize exposure, unlock value, and execute with precision in complex energy environments.</p>
+          </div>
+        </div>
+        <a href="" class="what-we-do--link sce-btn sce-btn--primary">LEARN MORE</a>
+      </div>
+    </div>
+  </section>
+  <section class="about-us">
+    <div class="container">
+      <div class="about-us--head">
+        <h2 class="sce-heading--secondary">We are a seasoned team of commodity industry executives with combined 150+ years of sector knowledge.</h2>
+        <p class="sce-heading--sub">
+          With a dedicated focus on global natural gas, power, carbon, agricultural commodities, and natural gas liquids (NGLs) markets, we deliver the intelligence and execution needed to stay ahead in a dynamic market.
+        </p>
+        <a href="" class="sce-btn sce-btn--primary">ABOUT US</a>
+      </div>
+      <div class="about-us--content">
+        <div class="about-us--content_map">
+          <img src="./assets/images/about-map.png" alt="">
+        </div>
+        <div class="about-us--content_numbers">
+          <div class="about-us--content_numbers-item">
+            <h4>115+</h4>
+            <span>Active Customers Globally</span>
+          </div>
+          <div class="about-us--content_numbers-item">
+            <h4>7</h4>
+            <span>Active Markets</span>
+          </div>
+          <div class="about-us--content_numbers-item">
+            <h4>10,000+</h4>
+            <span>Derivative Transactions Cleared in Trailing 12 months</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="press">
+    <div class="container">
+      <div class="press-content">
+        <h2 class="sce-heading--secondary">Press & Publications</h2>
+        @@include('parts/press.html')
+        <a href="" class="sce-btn sce-btn--primary">READ MORE</a>
+      </div>
+    </div>
+  </section>
 </main>
 
 @@include('parts/footer.html')

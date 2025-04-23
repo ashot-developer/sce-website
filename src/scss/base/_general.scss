@@ -1,0 +1,18 @@
+@use '../base/vars' as *;
+
+.container {
+  max-width: 1430px;
+  padding: 0 40px;
+  margin: 0 auto;
+
+  @media screen and (max-width: $noutbook-small-screen) {
+    max-width: 1230px;
+  }
+  @media screen and (max-width: $tablet-screen) {
+    max-width: 1230px;
+    padding: 0 20px;
+  }
+  @media screen and (max-width: $mobile-screen) {
+    max-width: 1230px;
+  }
+}

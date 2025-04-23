@@ -1,0 +1,135 @@
+@use '../base/vars' as *;
+
+.press-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 64px;
+  flex-wrap: wrap;
+  &--item {
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    width: calc(33.3% - 42.6px);
+    color: $black;
+    &_img {
+      min-height: 360px;
+      background-color: #0A1B5F1A;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      & img {
+        max-width: 233px;
+        width: 100%;
+        transition: .2s ease;
+      }
+    }
+    &_title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 24px;
+      letter-spacing: -0.48px;
+      text-decoration: none;
+      color: $black;
+      transition: color .2s ease;
+    }
+    &_desc {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 26px;
+      letter-spacing: 0.3px;
+      opacity: 0.6;
+      margin: 10px 0;
+    }
+    &_date {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 26px;
+      letter-spacing: 0.3px;
+      opacity: 0.6;
+    }
+    &:hover {
+      .press-list--item_title {
+        color: $green-accent;
+      }
+      .press-list--item_img {
+        & img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $noutbook-small-screen) {
+  .press-list {
+    gap: 40px;
+    &--item {
+      width: calc(33.3% - 26.6px);
+      &_img {
+        min-height: 320px;
+        & img {
+          max-width: 207px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-big-screen) {
+  .press-list {
+    gap: 20px;
+    &--item {
+      width: calc(33.3% - 13.3px);
+      &_img {
+        min-height: 260px;
+        & img {
+          max-width: 142px;
+        }
+      }
+      &_title {
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: -0.2px;
+      }
+      &_desc {
+        font-size: 14px;
+        line-height: 26px;
+        letter-spacing: 0.28px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-screen) {
+  .press-list {
+    &--item {
+      width: calc(33.3% - 13.3px);
+      &_img {
+        min-height: 220px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-small-screen) { 
+  .press-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-right: 40px;
+    &--item {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-screen) { 
+  .press-list {
+    &--item {
+      max-width: 270px;
+    }
+  }
+}

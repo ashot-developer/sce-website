@@ -1,3 +1,17 @@
-@use 'reset';
-@use 'header';
-@use 'footer';
+@use './base/reset' as *;
+@use './base/vars' as *;
+@use './base/fonts';
+@use './base/general';
+@use './components/button';
+@use './components/heading';
+@use './parts/header';
+@use './parts/footer';
+@use './parts/press';
+@use './pages/home';
+@use './pages/contact';
+@use './parts/contact-form-popup';
+@use './pages/main-press';
+
+* {
+  font-family: $font-primary;
+}

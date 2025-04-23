@@ -1,0 +1,239 @@
+@use '../base/vars' as *;
+
+.contact {
+  padding-top: 155px;
+  &-form {
+    margin-bottom: 80px;
+    .container {
+      display: flex;
+      align-items: flex-start;
+      gap: 100px;
+    }
+    &__social {
+      &-links {
+        display: flex;
+        margin: 30px 0;
+        gap: 70px;
+        &--item {
+          h6 {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 14px;
+            letter-spacing: 2.8px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            color: $medium-black;
+          }
+          a {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 26px;
+            letter-spacing: 0.3px;
+            text-decoration: none;
+            color: $medium-black;
+            &:hover {
+              color: $green;
+            }
+          }
+        }
+      }
+      &--lnk {
+       &:hover {
+        svg {
+          path {
+            fill: $green;
+          }
+        }
+       }
+      }
+    }
+    &__form {
+      max-width: 495px;
+      width: 100%;
+      form {
+        width: 100%;
+        .sce-btn {
+          min-width: 170px;
+        }
+      }
+      &-fieldgroup {
+        display: flex;
+        gap: 6px;
+        margin-bottom: 6px;
+        
+        input, textarea {
+          background-color: $flash-white;
+          border: 0;
+          padding: 5px 14px;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 26px;
+          letter-spacing: 0.3px;
+          flex: 1;
+          transition: background .2s ease-out;
+          cursor: pointer;
+          &:focus {
+            outline: none;
+            background-color: $platinum;
+          }
+          &:hover {
+            background-color: $platinum;
+          }
+        }
+        textarea {
+          width: 100%;
+          min-height: 115px;
+        }
+        .textarea-wrapper {
+          position: relative;
+          display: flex;
+          width: 100%;
+        }
+        
+        textarea {
+          width: 300px;
+          height: 150px;
+          resize: none;
+        }
+        
+        .resize-handle {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          right: 5px;
+          bottom: 5px;
+          cursor: row-resize;
+          background: url('../assets/images/resizer.svg') no-repeat center;
+          background-size: contain;
+        }        
+      }
+    }
+  }
+  .container {
+    padding-left: 175px;
+  }
+
+  .contact-map {
+    margin-bottom: 120px;
+    &__inner {
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    &__mobile {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: $noutbook-small-screen) {
+  .contact {
+    & .container {
+      padding-left: 80px;
+    }
+    &-form {
+      & .container {
+        gap: 50px;
+      }
+      &__social {
+        &-links {
+          gap: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-big-screen) {
+  .contact {
+    &-form {
+      &__social {
+        &-links {
+          flex-direction: column;
+          gap: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-screen) {
+  .contact {
+    & .container {
+      padding-left: 20px;
+    }
+    &-form {
+      & .container {
+        flex-direction: column;
+        gap: 25px;
+      }
+      &__form {
+        max-width: 100%;
+        &-fieldgroup {
+          margin-bottom: 10px;
+        }
+      }
+      &__social {
+        width: 100%;
+        &-links {
+          margin: 0;
+        }
+        &--cont {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-screen) {
+  .contact {
+    &-form {
+      margin-bottom: 40px;
+      &__form {
+        form {
+          .sce-btn {
+            min-width: unset;
+          }
+        }
+        &-fieldgroup {
+          flex-direction: column;
+        }
+      }
+    }
+    &-map {
+      margin-bottom: 60px!important;
+      &__inner {
+        display: none;
+      }
+      &__mobile {
+        display: block!important;
+        ul {
+          columns: 2;
+        }
+        &-item {
+          margin-bottom: 25px;
+          min-height: 66px;
+          h5 {
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 12px;
+            letter-spacing: 2.4px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+          }
+          p {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: 0.28px;
+          }
+        }
+      }
+    }
+  }
+}
