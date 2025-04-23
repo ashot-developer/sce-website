@@ -1,0 +1,133 @@
+@use './base/vars' as *;
+
+.article {
+  .single-article {
+    padding-top: 150px;
+    margin-bottom: 200px;
+    &__inner {
+      padding-left: 47.5px;
+    }
+    & .sce-heading--main-medium {
+      max-width: 985px;
+      margin-bottom: 20px;
+    }
+    & .back-btn {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 14px;
+      letter-spacing: 2.8px;
+      text-transform: uppercase;
+      color: $black;
+      text-decoration: none;
+      margin-bottom: 40px;
+      svg {
+        margin-right: 10px;
+        vertical-align: -1px;
+      }
+      &:hover {
+        color: $green;
+        svg {
+          path {
+            stroke: $green;
+          }
+        }
+      }
+    }
+    &__info {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 40px;
+      &-date {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 26px;
+        letter-spacing: 0.3px;
+      }
+      &-link {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 26px;
+        letter-spacing: 0.3px;
+        text-decoration: underline;
+        text-decoration-style: solid;
+        text-decoration-thickness: 0%;
+        text-decoration-skip-ink: auto; 
+        color: #0B0F0D;
+      }
+    }
+    &__content {
+      max-width: 800px;
+      & p {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 26px;
+        letter-spacing: 0.3px;
+        margin-bottom: 20px;
+        color: #0B0F0D;
+      }
+    }
+  }
+
+  .featured-post {
+    margin-bottom: 100px;
+    & .sce-heading--main-medium {
+      margin-bottom: 40px;
+    }
+    & .press-list {
+      max-width: 1208px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-small-screen) {
+  .article {
+    .single-article {
+      padding-top: 130px;
+      margin-bottom: 95px;
+      &__inner {
+        padding-left: 0;
+      }
+      & .sce-heading--main-medium {
+        margin-bottom: 18px;
+      }
+      & .back-btn {
+        margin-bottom: 25px;
+        svg {
+          margin-right: 10px;
+          vertical-align: -1px;
+        }
+        &:hover {
+          color: $green;
+          svg {
+            path {
+              stroke: $green;
+            }
+          }
+        }
+      }
+      &__info {
+        margin-bottom: 24px;
+      }
+      &__content {
+        max-width: 800px;
+        & p {
+          font-size: 14px;
+          line-height: 26px;
+          letter-spacing: 0.28px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  
+    .featured-post {
+      & .container {
+        padding: 0 66px;
+      }
+      & .press-list {
+        padding-right: 0;
+      }
+    }
+  }
+}
