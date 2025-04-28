@@ -67,6 +67,22 @@
         margin-bottom: 20px;
         color: #0B0F0D;
       }
+      & ul {
+        font-family: $font-primary;
+        margin-bottom: 20px;
+        list-style: disc;
+        list-style-position: inside;
+        padding-left: 15px;
+        & li {
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 26px;
+          letter-spacing: 0.3px;       
+        }
+      }
+      & a {
+        color: #0B0F0D;
+      }
     }
   }
 
