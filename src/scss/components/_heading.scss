@@ -5,6 +5,13 @@
     font-size: 73px;
     line-height: 80px;
     letter-spacing: -0.3px;
+
+    &-medium {
+      font-weight: 500;
+      font-size: 54px;
+      line-height: 70.2px;
+      letter-spacing: -1.08px;
+    }
   }
 
   &--sub {
@@ -35,6 +42,12 @@
     &--main {
       font-size: 40px;
       line-height: 48px;
+      &-medium {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: -0.72px;
+      }
     }
   
     &--sub {

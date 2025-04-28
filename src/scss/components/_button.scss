@@ -7,7 +7,7 @@
   padding: 11px 28px;
   font-weight: 700;
   font-size: 14px;
-  line-height: 100%;
+  line-height: 18px;
   letter-spacing: 2.8px;
   vertical-align: middle;
   text-transform: uppercase;
@@ -15,6 +15,7 @@
   border: 0;
   transition: .2s all;
   cursor: pointer;
+  text-align: center;
 
   &--primary {
     color: $black;
