@@ -11,29 +11,6 @@
       max-width: 985px;
       margin-bottom: 20px;
     }
-    & .back-btn {
-      display: inline-block;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 14px;
-      letter-spacing: 2.8px;
-      text-transform: uppercase;
-      color: $black;
-      text-decoration: none;
-      margin-bottom: 40px;
-      svg {
-        margin-right: 10px;
-        vertical-align: -1px;
-      }
-      &:hover {
-        color: $green;
-        svg {
-          path {
-            stroke: $green;
-          }
-        }
-      }
-    }
     &__info {
       display: flex;
       align-items: center;
@@ -71,8 +48,7 @@
         font-family: $font-primary;
         margin-bottom: 20px;
         list-style: disc;
-        list-style-position: inside;
-        padding-left: 15px;
+        padding-left: 25px;
         & li {
           font-weight: 500;
           font-size: 15px;
@@ -107,21 +83,6 @@
       }
       & .sce-heading--main-medium {
         margin-bottom: 18px;
-      }
-      & .back-btn {
-        margin-bottom: 25px;
-        svg {
-          margin-right: 10px;
-          vertical-align: -1px;
-        }
-        &:hover {
-          color: $green;
-          svg {
-            path {
-              stroke: $green;
-            }
-          }
-        }
       }
       &__info {
         margin-bottom: 24px;
