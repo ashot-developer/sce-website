@@ -1,18 +1,46 @@
 @use '../base/vars'as *;
 
 .header {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  top: 0;
-  z-index: 9;
-
   & .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 12px;
     padding-bottom: 12px;
+  }
+
+  &.services-header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    transition: transform 0.3s ease;
+  }
+
+  &.about-header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    transition: transform 0.3s ease;
+  }
+
+  &.home-header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  transition: transform 0.3s ease;
+    .header-menu {
+    opacity: 0;
+    transition: opacity 0.7s ease 1.2s;
+        &.animate {
+      opacity: 1;
+    }
+    } 
   }
 
   &-menu {
@@ -36,6 +64,7 @@
         letter-spacing: 2.8px;
         text-decoration: none;
         color: $white;
+
         &:hover {
           color: $green;
         }
@@ -74,39 +103,96 @@
       }
     }
   }
+
   &.active {
     .header-toggle--btn {
       z-index: 999;
+
       & svg {
         & rect {
           fill: $black;
         }
       }
+
       .top {
         transform: rotate(45deg) translate(-6px, -4px);
         width: 40px;
       }
+
       .middle {
         opacity: 0;
       }
+
       .bottom {
         transform: rotate(-45deg) translate(-26px, 4px);
         width: 40px;
       }
     }
+
     & .header-menu {
       opacity: 1;
       visibility: visible;
     }
+
     .header-logo {
       display: none;
+
       &.dark {
         display: block;
       }
     }
   }
+
+  &.home-header {
+    & .header-logo {
+      height: 85px;
+      & img {
+        position: absolute;
+        max-width: 220px;
+        width: 220px;
+        transform: translate(0, 40%);
+        transition:
+          transform 0.7s ease 1.2s,
+          max-width 0.7s ease 1.2s,
+          width 0.7s ease 1.2s;
+
+        &.animate {
+          transform: translate(0, 0);
+          max-width: 85px;
+          width: 100%;
+        }
+
+        @media screen and (max-width: 1440px) {
+          transform: translate(0px, 40%);
+          max-width: 150px;
+          width: 150px;
+        }
+
+        @media screen and (max-width: 835px) {
+          transform: translate(20px, 40%);
+          max-width: 120px;
+          width: 120px;
+        }
+
+        @media screen and (max-width: 576px) {
+          transform: translate(0, 40%);
+          max-width: 100px;
+          width: 100px;
+        }
+      }
+
+      &.dark {
+        & img {
+          max-width: 60px;
+          width: 60px;
+        }
+      }
+    }
+  }
+
   &-logo {
     z-index: 999;
+
     &.dark {
       display: none;
     }
@@ -115,16 +201,20 @@
   &.dark-header {
     & .header-menu--item_link {
       color: $black;
+
       &:hover {
         color: $green;
       }
     }
+
     & .header-logo {
       display: none;
+
       &.dark {
         display: block;
       }
     }
+
     & .header-toggle--btn {
       svg {
         rect {
@@ -133,11 +223,16 @@
       }
     }
   }
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
 }
 
 @media screen and (max-width: $tablet-screen) {
   .header {
     z-index: 999;
+
     &-menu {
       z-index: 9;
       position: fixed;
@@ -153,34 +248,49 @@
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.3s ease;
+
       & ul {
         display: flex;
         flex-direction: column;
         gap: 40px;
       }
+
       &--item {
         &:not(:last-child) {
           margin-right: 20px;
         }
+
         &_link {
           color: $black;
         }
       }
     }
+
     & .sce-btn.sce-btn--primary {
       background: none;
       padding: 0;
     }
+
     &-toggle {
       &--btn {
         display: block;
       }
     }
+
     &-logo {
       width: 60px;
+
       & img {
         max-width: 100%;
       }
+    }
+  }
+}
+
+@media screen and (max-width: $noutbook-small-screen) {
+  .home-header {
+    & .container {
+      max-width: 1280px;
     }
   }
 }

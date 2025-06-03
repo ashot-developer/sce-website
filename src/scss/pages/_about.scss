@@ -1,0 +1,309 @@
+@use './base/vars' as *;
+
+.about {
+  .hero {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 700px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) -44.62%, rgba(0, 0, 0, 0.65) 59.43%);
+      z-index: 9;
+    }
+
+    & video {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    &-content {
+      position: relative;
+      z-index: 10;
+      padding-top: 230px;
+      padding-bottom: 40px;
+
+      & h1 {
+        margin-bottom: 40px;
+        color: $white;
+      }
+
+      & .sce-heading--sub {
+        color: $white;
+        max-width: 660px;
+      }
+    }
+  }
+
+  .footprint {
+    background-color: $light-black;
+    color: $white;
+    padding: 80px 0 100px 0;
+    margin-bottom: 150px;
+    &__content {
+      padding-left: 40px;
+    }
+
+    & .sce-heading--secondary {
+      margin-bottom: 25px;
+    }
+
+    &-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 60px;
+      margin-bottom: 120px;
+      & p {
+        flex: 1;
+      }
+    }
+
+    &-body {
+      margin-bottom: 120px;
+      text-align: center;
+    }
+
+    &-footer {
+      &__list {
+        display: flex;
+        align-items: flex-start;
+        gap: 32px;
+        &-item {
+          text-align: center;
+          flex: 1;
+          & h4 {
+            font-weight: 350;
+            font-size: 64px;
+            line-height: 80px;
+            letter-spacing: 0;
+          }
+          & p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22.4px;
+            letter-spacing: 0px;
+          }
+        }
+      }
+    }
+  }
+
+  .team {
+    margin-bottom: 120px;
+    & .sce-heading--secondary {
+      margin-bottom: 40px;
+    }
+    &__content {
+      padding-left: 60px;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 64px;
+      row-gap: 40px;
+      &-item {
+        width: calc(33.3% - 42.6px);
+        max-width: 360px;
+        cursor: pointer;
+        &:hover {
+          .team__list-item--name, .team__list-item--pos {
+            color: $green;
+          }
+        }
+        &--image {
+          & img {
+            max-width: 100%;
+          }
+        }
+        &--name {
+          font-weight: 500;
+          font-size: 32px;
+          line-height: 32px;
+          letter-spacing: -0.64px;
+          transition: color .2s;
+          margin-top: 15px;
+        }
+        &--pos { 
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 26px;
+          letter-spacing: 0.3px;
+          opacity: .5;
+          transition: color .2s;
+        }
+        &--desc {
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 26px;
+          letter-spacing: 0.3px;
+          position: relative;
+          height: 110px;
+          overflow: hidden;
+          &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 70px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+          }
+        }
+        &--link {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 16.8px;
+          letter-spacing: 2.8px;
+          color: $light-black;
+          text-decoration: none;
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $noutbook-small-screen) {
+  .about {
+    .team {
+      &__list {
+        justify-content: space-between;
+        column-gap: 40px;
+        row-gap: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-big-screen) {
+  .about {
+    .footprint {
+      margin-bottom: 100px;
+      &-body {
+        & img {
+          max-width: 100%;
+        }
+      }
+  
+      &-footer {
+        &__list {
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+        }
+      }
+    }
+
+    .team {
+      &__list {
+        gap: 15px;
+        row-gap: 30px;
+        &-item {
+          max-width: unset;
+          width: calc(50% - 7.5px);
+        }
+      }
+      &__content {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-screen) {
+  .about {
+    .footprint {
+      background-color: $light-black;
+      color: $white;
+      padding: 40px 0 40px 0;
+      margin-bottom: 40px;
+      &__content {
+        padding-left: 40px;
+      }
+  
+      &-head {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-screen) {
+  .about {
+    .footprint {
+      background-color: $light-black;
+      color: $white;
+      padding: 40px 0 60px 0;
+      &__content {
+        padding-left: 0;
+      }
+  
+      & .sce-heading--secondary {
+        margin-bottom: 20px;
+      }
+  
+      &-head {
+        margin-bottom: 60px;
+        & p {
+          font-size: 14px;
+          letter-spacing: 0.28px;
+        }
+      }
+  
+      &-body {
+        margin-bottom: 60px;
+      }
+      
+      &-footer {
+        &__list {
+          & h4 {
+            font-size: 54px;
+            line-height: 64.8px;
+            letter-spacing: 0px;
+          }
+          & p {
+            font-size: 13px;
+            line-height: 22px;
+            letter-spacing: 0.26px;
+          }
+        }
+      }
+    }
+    .team {
+      &__list {
+        &-item {
+          &--link {
+            display: inline-block;
+          }
+
+          &--name {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 26px;
+            letter-spacing: -0.4px;
+          }
+
+          &--pos { 
+            font-size: 14px;
+          }
+          &--desc {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

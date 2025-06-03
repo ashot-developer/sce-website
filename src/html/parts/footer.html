@@ -4,6 +4,7 @@
       <div class="footer-content__left">
         <div class="footer-content__logo">
           <a href="" class="footer-logo">
+            <span id="dot14" class="dot"></span>
             <img src="./assets/images/logo-white.svg" alt="">
           </a>
           <p class="footer-copyright">© 2025 Snapper Creek Energy. All rights reserved.</p>
@@ -42,6 +43,14 @@
   </div>
 </footer>
 @@include('./contact-form-popup.html')
+@@include('./team-item-popup.html')
+<svg id="line-layer" xmlns="http://www.w3.org/2000/svg"></svg>
+<script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script> 
+
+<!-- GSAP & ScrollTrigger -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
 <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 <script src="./js/script.min.js"></script>
 </body>

@@ -10,9 +10,12 @@
 @use './pages/home';
 @use './pages/contact';
 @use './parts/contact-form-popup';
+@use './parts/team-item-popup';
 @use './pages/main-press';
 @use './pages/article';
 @use './pages/services';
+@use './pages/privacy-policy';
+@use './pages/about';
 
 * {
   font-family: $font-primary;

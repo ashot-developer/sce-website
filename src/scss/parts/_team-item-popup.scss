@@ -1,0 +1,202 @@
+@use './base/vars'as *;
+
+.team-popup {
+  .modal {
+    &[aria-hidden="true"] {
+      display: none;
+    }
+
+    &[aria-hidden="false"] {
+      display: block;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      height: fit-content;
+    }
+
+    &__overlay {
+      background-color: rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      animation: fadeIn 0.3s forwards;
+    }
+
+    &__container {
+      background: $white;
+      max-width: 980px;
+      width: 100%;
+      padding: 40px;
+      border-radius: 8px;
+      position: relative;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: scale(0.9);
+      animation: zoomIn 0.3s forwards;
+      min-height: 735px;
+      border-radius: 0;
+      padding: 60px;
+    }
+
+    &__close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 26px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      outline: none;
+    }
+
+    &__content {
+      display: flex;
+      justify-content: flex-start;
+      gap: 60px;
+      max-height: 100vh;
+      overflow-y: auto;
+      padding-bottom: 100px;
+
+      &-left {
+        max-width: 360px;
+
+        &--img {
+          max-width: 360px;
+          margin-bottom: 20px;
+
+          & img {
+            max-width: 100%;
+          }
+        }
+
+        &--name {
+          font-weight: 500;
+          font-size: 32px;
+          line-height: 32px;
+          letter-spacing: 0.64px;
+        }
+
+        &--position {
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 26px;
+          letter-spacing: 0.3px;
+        }
+      }
+
+      &-right {
+        max-width: calc(100% - 420px);
+
+        &--description {
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 26px;
+          letter-spacing: 0.3px;
+
+          li {
+            position: relative;
+            margin-bottom: 20px;
+            padding-left: 30px;
+
+            p {
+              margin-bottom: 10px;
+            }
+
+            &::before {
+              content: "";
+              display: block;
+              width: 11px;
+              height: 11px;
+              background-color: $green;
+              position: absolute;
+              left: 0;
+              top: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Animations
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: $tablet-big-screen) {
+  .team-popup {
+    .modal__container {
+      margin: 0 40px;
+      & .modal__content {
+        flex-direction: column;
+        &-left, &-right {
+          max-width: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .team-popup .modal__content-left--img {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: $tablet-small-screen) {
+  .team-popup {
+    .modal__container {
+      margin: 0;
+      min-height: 300px;
+      padding: 80px 20px;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-screen) {
+  .team-popup {
+    .modal__container {
+      .modal__title {
+        font-size: 25px;
+        line-height: 28px;
+        margin-top: 0;
+      }
+
+      .modal__icon {
+        svg {
+          width: 70px;
+        }
+      }
+
+      .modal__content {
+        font-size: 14px;
+        line-height: 24px;
+        height: 100%;
+      }
+    }
+  }
+    .team-popup .modal__content-left--img img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-height: 750px) and (min-width: $mobile-screen) {
+  .team-popup {
+    .modal__content-right {
+      max-height: 100%;
+      overflow-y: auto;
+    }
+  }
+}
