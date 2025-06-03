@@ -1,7 +1,7 @@
 @use './base/vars' as *;
 
 .privacy-policy {
-  padding-top: 150px;
+  padding-top: 40px;
   &__section {
     padding-left: 40px;
     padding-bottom: 170px;
@@ -45,7 +45,7 @@
 
 @media screen and (max-width: $mobile-screen) {
   .privacy-policy {
-    padding-top: 95px;
+    padding-top: 32px;
     &__section {
       padding-left: 0;
       padding-bottom: 60px;

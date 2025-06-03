@@ -2,7 +2,7 @@
 
 .article {
   .single-article {
-    padding-top: 150px;
+    padding-top: 40px;
     margin-bottom: 200px;
     &__inner {
       padding-left: 47.5px;
@@ -76,7 +76,7 @@
 @media screen and (max-width: $tablet-small-screen) {
   .article {
     .single-article {
-      padding-top: 130px;
+      padding-top: 32px;
       margin-bottom: 95px;
       &__inner {
         padding-left: 0;
@@ -100,7 +100,7 @@
   
     .featured-post {
       & .container {
-        padding: 0 66px;
+        padding: 0 47px;
       }
       & .press-list {
         padding-right: 0;

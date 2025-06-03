@@ -1,18 +1,151 @@
-@use '../base/vars' as *;
+@use '../base/vars'as *;
 
 .container {
   max-width: 1430px;
-  padding: 0 40px;
+  padding: 0 80px;
   margin: 0 auto;
 
   @media screen and (max-width: $noutbook-small-screen) {
     max-width: 1230px;
   }
+
   @media screen and (max-width: $tablet-screen) {
     max-width: 1230px;
     padding: 0 20px;
   }
+
   @media screen and (max-width: $mobile-screen) {
     max-width: 1230px;
+  }
+}
+
+.dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: $green;
+}
+
+
+#line-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+  width: 100%;
+  transition: opacity 0.7s ease 1.2s;
+  opacity: 0;
+
+  &.animate {
+    opacity: 1;
+  }
+}
+
+.what-we-do--list_item-img {
+  position: relative;
+  .small-dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: $green;
+    position: absolute;
+    opacity: 0;
+  }
+  #dot4 {
+    left: -37px;
+    top: 38px;
+  }
+
+  #dot5 {
+    bottom: 0;
+    left: 0;
+  }
+
+  #dot6 {
+    top: 38px;
+    left: 35px;
+  }
+
+  #dot7 {
+    top: 38px;
+    left: 70px;
+  }
+
+  #dot8 {
+    top: 5px;
+    left: 107px;
+  }
+
+  #dot9 {
+    top: 38px;
+    left: 144px;
+  }
+}
+
+.header-logo.dark {
+  position: relative;
+  & .dot {
+    position: absolute;
+    bottom: 2px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .contact-page .footer .container {
+    max-width: 1430px;
+  }
+}
+
+@media screen and (max-width: 1480px) {
+  #dot14, #dot12 {
+    display: none;
+  }
+
+  .what-we-do_pattern {
+    text-align: right;
+    img {
+      width: 60%;
+    }
+  }
+
+  .home .about-us .container {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .what-we-do_pattern {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .home .press-content {
+    .dot {
+      left: -40px;
+    }
+  }
+
+  .footer-logo .dot {
+    left: 0!important;
+  }
+
+  .contact-page .footer .container {
+    max-width: 1230px;
+  }
+}
+
+@media screen and (max-width: 1190px) {
+  .header-logo.dark .dot {
+    display: none;
+  }
+
+  .footer-logo .dot {
+    display: none;
+  }
+
+  .contact .container { 
+    padding-left: 80px;
   }
 }

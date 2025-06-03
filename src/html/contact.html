@@ -1,6 +1,45 @@
-@@include('parts/header.html', {
-  "headerClass": "dark-header"
-})
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCE Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="../css/style.min.css" />
+</head>
+<body class="contact-page">
+  <header id="main-header" class="header dark-header">
+    <div class="container">
+      <a href="" class="header-logo">
+        <img src="./assets/images/logo-white.svg" alt="">
+      </a>
+      <a href="" class="header-logo dark">
+        <span class="dot" id="dot1"></span>
+        <img src="./assets/images/logo-black.svg" alt="">
+      </a>
+      <nav class="header-menu">
+        <ul>
+          <li class="header-menu--item">
+            <a href="" class="header-menu--item_link">SERVICES</a>
+          </li>
+          <li class="header-menu--item">
+            <a href="" class="header-menu--item_link">ABOUT</a>
+          </li>
+          <li class="header-menu--item">
+            <a href="" class="header-menu--item_link">PRESS</a>
+          </li>
+        </ul>
+        <a href="" class="sce-btn sce-btn--primary">CONTACT US</a>
+      </nav>
+      <button class="header-toggle--btn">
+        <svg width="40" height="40" viewBox="0 0 40 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect class="line top" height="2" fill="white"/>
+          <rect class="line middle" x="10" y="10" height="2" fill="white"/>
+          <rect class="line bottom" x="20" y="20" height="2" fill="white"/>
+        </svg>
+      </button>
+    </div>
+  </header>
 
 <main class="contact">
   <section class="contact-form">
@@ -83,4 +122,60 @@
     </div>
   </section>
 </main>
-@@include('parts/footer.html')
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-content__left">
+        <div class="footer-content__logo">
+          <a href="" class="footer-logo">
+            <span id="dot2" class="dot"></span>
+            <img src="./assets/images/logo-white.svg" alt="">
+          </a>
+          <p class="footer-copyright">© 2025 Snapper Creek Energy. All rights reserved.</p>
+        </div>
+        <div class="footer-nav">
+          <div class="footer-nav--list">
+            <div class="footer-nav--list_social">
+              <div class="footer-nav--list_social-email">
+                <h6>Email</h6>
+                <a href="mailto:info@scebrokerage.com">info@scebrokerage.com</a>
+              </div>
+              <a href="" class="footer-nav--list_social-link">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M2.66667 0C1.1939 0 0 1.1939 0 2.66667V29.3333C0 30.806 1.1939 32 2.66667 32H29.3333C30.806 32 32 30.806 32 29.3333V2.66667C32 1.1939 30.806 0 29.3333 0H2.66667ZM9.81468 7.11595C9.82469 8.81595 8.5522 9.86345 7.04219 9.85595C5.61968 9.84844 4.37968 8.71595 4.38718 7.11845C4.39468 5.61595 5.58219 4.40844 7.12469 4.44345C8.68969 4.47845 9.82469 5.62596 9.81468 7.11595ZM16.4972 12.0209H12.0173H12.0148V27.2384H16.7497V26.8834C16.7497 26.208 16.7492 25.5324 16.7486 24.8567C16.7472 23.0544 16.7456 21.2501 16.7548 19.4484C16.7573 19.0108 16.7772 18.5559 16.8898 18.1383C17.3122 16.5783 18.7148 15.5708 20.2798 15.8185C21.2848 15.9758 21.9497 16.5584 22.2297 17.506C22.4023 18.0983 22.4798 18.7358 22.4873 19.3534C22.5076 21.2158 22.5047 23.0782 22.5019 24.9408C22.5008 25.5982 22.4997 26.256 22.4997 26.9134V27.2359H27.2498V26.8709C27.2498 26.0674 27.2494 25.264 27.2489 24.4606C27.248 22.4526 27.2469 20.4446 27.2523 18.4359C27.2548 17.5284 27.1573 16.6334 26.9348 15.7559C26.6023 14.4508 25.9148 13.3708 24.7973 12.5909C24.0048 12.0359 23.1348 11.6784 22.1623 11.6384C22.0516 11.6338 21.9399 11.6278 21.8277 11.6217C21.3305 11.5948 20.8251 11.5675 20.3497 11.6634C18.9897 11.9359 17.7948 12.5584 16.8923 13.6558C16.7874 13.7817 16.6848 13.9095 16.5317 14.1003L16.4972 14.1435V12.0209ZM4.76736 27.2434H9.47986V12.0308H4.76736V27.2434Z" fill="white"/>
+                </svg>   
+              </a>
+            </div>
+            <div class="footer-nav--list_menus">
+              <ul>
+                <li class="footer-nav--list_menus-item"><a href="#" class="footer-nav--list_menus-item--link">SERVICES</a></li>
+                <li class="footer-nav--list_menus-item"><a href="#" class="footer-nav--list_menus-item--link">ABOUT</a></li>
+                <li class="footer-nav--list_menus-item"><a href="#" class="footer-nav--list_menus-item--link">PRESS</a></li>
+                <li class="footer-nav--list_menus-item"><a href="#" class="footer-nav--list_menus-item--link">CONTACT US</a></li>
+                <li class="footer-nav--list_menus-item"><a href="#" class="footer-nav--list_menus-item--link">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-description">
+        <p>The risk of loss in trading commodity futures contracts can be substantial. You should, therefore, carefully consider whether such trading is suitable for you in light of your circumstances and financial resources. All information, publications, and reports, including this specific material, used and distributed by Snapper Creek Energy I LP shall be construed as a solicitation.</p>
+        <p>Snapper Creek Energy UK Ltd, registered office at Suite 5f 28 Eccleston Square, London, United Kingdom, SW1V 1NZ, Company Number 16064127. Snapper Creek Energy UK Ltd (FRN 1023620) is an Appointed Representative of Strata Global Ltd (FRN 563834) which is Authorised and Regulated by the Financial Conduct Authority. The Principal is registered in England & Wales, registered office at 7-11 Moorgate, London EC2R 6AF, Company Number 07707508.</p>
+        <p class="footer-copyright">© 2025 Snapper Creek Energy. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+@@include('./parts/contact-form-popup.html')
+@@include('./parts/team-item-popup.html')
+<svg id="line-layer" xmlns="http://www.w3.org/2000/svg"></svg>
+<script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script> 
+
+<!-- GSAP & ScrollTrigger -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+<script src="./js/script.min.js"></script>
+</body>
+</html>

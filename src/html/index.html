@@ -1,4 +1,6 @@
-@@include('parts/header.html')
+@@include('parts/header.html', {
+  "headerClass": "home-header"
+})
 
 <main class="home">
   <section class="hero">
@@ -9,38 +11,62 @@
     <div class="container">
       <div class="hero-content">
         <h1 class="sce-heading--main">Powering the Future with Precision and Insight</h1>
-        <p class="sce-heading--sub">At Snapper Creek Energy, we combine industry-leading execution, cutting-edge data analytics, and deep market expertise to drive smarter, faster energy trading. Specializing in traditional, renewable, and transitional energy markets, we offer top-tier execution, strategic advisory, and proprietary insights to help clients capitalize on opportunities with confidence. With a dedicated focus on global natural gas, power, carbon, agricultural commodities, and natural gas liquids (NGLs) markets, we deliver the intelligence and execution needed to stay ahead in a dynamic market.</p>
-        <a class="hero-content--link" href="">LEARN MORE</a>
+        <div class="sce-heading--main__desc">
+          <p class="sce-heading--sub">At Snapper Creek Energy, we combine industry-leading execution, cutting-edge data analytics, and deep market expertise to drive smarter, faster energy trading. Specializing in traditional, renewable, and transitional energy markets, we offer top-tier execution, strategic advisory, and proprietary insights to help clients capitalize on opportunities with confidence. With a dedicated focus on global natural gas, power, carbon, agricultural commodities, and natural gas liquids (NGLs) markets, we deliver the intelligence and execution needed to stay ahead in a dynamic market.</p>
+          <a class="hero-content--link" href=""><span id="dot1" class="dot"></span> LEARN MORE</a>
+        </div>
       </div>
     </div>
   </section>
-  <section class="what-we-do">
+  <section class="what-we-do fade-box">
     <div class="container">
       <div class="what-we-do--content">
-        <span class="sce-heading--top">WHAT WE DO</span>
-        <h2 class="sce-heading--secondary">At Snapper Creek, we operate specialized, complementary verticals aimed at delivering market advantage.</h2>
-        <p class="sce-heading--sub">
-          Snapper Creek’s seasoned team of energy industry executives leverages its in- depth research capabilities, proprietary data and analytics platform, advisory and execution services, and combined 100+ years of sector knowledge to maximize value for clients with speed and certainty.
-        </p>
+        <div class="what-we-do--content_head">
+          <div class="anim-up">
+            <span class="sce-heading--top"> <span id="dot2" class="dot"></span> WHAT WE DO</span>
+            <h2 class="sce-heading--secondary">At Snapper Creek, we operate specialized, complementary verticals aimed at delivering market advantage.</h2>
+            <p class="sce-heading--sub">
+              Snapper Creek’s seasoned team of energy industry executives leverages its in- depth research capabilities, proprietary data and analytics platform, advisory and execution services, and combined 100+ years of sector knowledge to maximize value for clients with speed and certainty.
+            </p>
+          </div>
+        </div>
         <div class="what-we-do--list">
+          <span id="dot3" class="dot"></span>
           <div class="what-we-do--list_item">
             <h3>Brokerage</h3>
-            <img src="./assets/images/brokerage.svg" alt="">
+            <div class="what-we-do--list_item-img">
+              <img src="./assets/images/brokerage.svg" alt="">
+            </div>
             <p>Snapper Creek runs integrated brokerage desks focused on natural gas, power, carbon, agricultural commodities, and natural gas liquids (NGLs) markets that offer best-in-class trading execution services.</p>
           </div>
           <div class="what-we-do--list_item">
             <h3>Market Analytics</h3>
-            <img src="./assets/images/analytics.svg" alt="">
+            <div class="what-we-do--list_item-img">
+              <span class="small-dot" id="dot4"></span>
+              <span class="small-dot" id="dot5"></span>
+              <span class="small-dot" id="dot6"></span>
+              <span class="small-dot" id="dot7"></span>
+              <span class="small-dot" id="dot8"></span>
+              <span class="small-dot" id="dot9"></span>
+              <img src="./assets/images/analytics.svg" alt="">
+            </div>
             <p>Snapper Creek harnesses advanced in-house data architecture and analytics tools to deliver high-resolution market intelligence. Our models drive transparent price discovery and actionable insights—empowering clients to make informed, real-time trading decisions with confidence.</p>
           </div>
           <div class="what-we-do--list_item">
             <h3>Advisory</h3>
-            <img src="./assets/images/advistory.svg" alt="">
+            <div class="what-we-do--list_item-img">
+              <img src="./assets/images/advistory.svg" alt="">
+            </div>
             <p>With decades of expertise across traditional, renewable, and transitional energy markets, Snapper Creek delivers tailored advisory solutions in risk management. Our team leverages deep commercial insight, real-time market data, and structured analytics to help clients optimize exposure, unlock value, and execute with precision in complex energy environments.</p>
           </div>
+          <span id="dot10" class="dot right"></span>
+          <div class="what-we-do__line"></div>
         </div>
         <a href="" class="what-we-do--link sce-btn sce-btn--primary">LEARN MORE</a>
       </div>
+    </div>
+    <div class="what-we-do_pattern">
+      <img src="./assets/images/side-graphic.svg" alt="">
     </div>
   </section>
   <section class="about-us">
@@ -54,9 +80,11 @@
       </div>
       <div class="about-us--content">
         <div class="about-us--content_map">
-          <img src="./assets/images/about-map.png" alt="">
+          <span id="dot12" class="dot"></span>
+          <img src="./assets/images/about-map.svg" alt="">
         </div>
         <div class="about-us--content_numbers">
+          <span id="dot11" class="dot"></span>
           <div class="about-us--content_numbers-item">
             <h4>115+</h4>
             <span>Active Customers Globally</span>
@@ -69,6 +97,14 @@
             <h4>10,000+</h4>
             <span>Derivative Transactions Cleared in Trailing 12 months</span>
           </div>
+          <div class="about-us--content_numbers-item">
+            <h4>6</h4>
+            <span>Physical Locations</span>
+          </div>
+          <div class="about-us--content_numbers-item">
+            <h4>175+</h4>
+            <span>Vessels Brokered in Trailing 12 months</span>
+          </div>
         </div>
       </div>
     </div>
@@ -76,12 +112,11 @@
   <section class="press">
     <div class="container">
       <div class="press-content">
-        <h2 class="sce-heading--secondary">Press & Publications</h2>
+        <h2 class="sce-heading--secondary"><span id="dot13" class="dot"></span> Press & Publications</h2>
         @@include('parts/press.html')
         <a href="" class="sce-btn sce-btn--primary">READ MORE</a>
       </div>
     </div>
   </section>
 </main>
-
 @@include('parts/footer.html')

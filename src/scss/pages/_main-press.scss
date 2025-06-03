@@ -1,7 +1,7 @@
 @use './base/vars' as *;
 
 .press-page {
-  padding: 170px 0;
+  padding: 50px 0;
   & .container {
     max-width: 1280px;
   }
@@ -23,7 +23,7 @@
 
 @media screen and (max-width: $tablet-small-screen) {
   .press-page {
-    padding-top: 120px;
+    padding-top: 25px;
     padding-bottom: 80px;
     & .container {
       padding: 0 47px;

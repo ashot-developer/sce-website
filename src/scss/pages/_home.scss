@@ -1,6 +1,19 @@
 @use '../base/vars'as *;
 
+.connection-line {
+  position: absolute;
+  background-color: #63DB54;
+  height: 1px;
+  z-index: 10;
+}
+
 .home {
+  section {
+    position: relative;
+    will-change: transform;
+    overflow: hidden;
+  }
+
   .hero {
     position: relative;
     z-index: 1;
@@ -55,24 +68,27 @@
         color: $white;
         text-decoration: none;
 
-        &::before {
-          content: "";
-          position: absolute;
+        & .dot {
           left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          display: block;
-          width: 15px;
-          height: 15px;
-          background-color: $green;
         }
       }
+    }
+
+    .sce-heading--main__desc {
+      opacity: 0;
+      transition: opacity 0.7s ease 1.2s;
+
+      &.animate {
+        opacity: 1;
+      }
+
     }
   }
 
   .what-we-do {
     margin-bottom: 100px;
     color: $medium-black;
+    position: relative;
 
     &--content {
       padding-left: 75px;
@@ -81,6 +97,10 @@
     & .sce-heading--secondary {
       margin: 40px 0 20px 0;
       max-width: 940px;
+    }
+
+    & .sce-heading--top {
+      position: relative;
     }
 
     & .sce-heading--sub {
@@ -97,15 +117,16 @@
       &_item {
         max-width: 340px;
 
-        & img {
+        &-img {
           margin: 40px 0;
         }
 
         & h3 {
-          font-weight: 500;
+          font-weight: 400;
           font-size: 32px;
           line-height: 32px;
           letter-spacing: -0.64px;
+          text-transform: uppercase;
         }
 
         & p {
@@ -115,18 +136,49 @@
           letter-spacing: 0.3px;
         }
       }
+
+      & .dot {
+        position: absolute;
+        left: -75px;
+        top: 110px;
+        transform: unset;
+
+        &.right {
+          left: unset;
+          right: -55px;
+        }
+      }
+    }
+
+    &__line {
+      display: block;
+      width: calc(100% + 100px);
+      height: 70px;
+      position: absolute;
+      left: -65px;
+      top: 83px;
     }
 
     &--link {
       margin-top: 30px;
+    }
+
+    &_pattern {
+      position: absolute;
+      right: 0;
+      top: 70px;
     }
   }
 
   .about-us {
     background-color: $light-black;
     color: $white;
-    padding: 80px 0 120px 0;
+    padding: 80px 0 20px 0;
     margin-bottom: 100px;
+
+    & .container {
+      max-width: 1540px;
+    }
 
     &--head {
       max-width: 1060px;
@@ -155,12 +207,20 @@
       gap: 40px;
 
       &_map {
+        will-change: transform;
         max-width: 860px;
         width: 100%;
 
         & img {
           width: 100%;
           height: 100%;
+        }
+
+        & .dot {
+          left: 37px;
+          top: 246px;
+          transform: unset;
+          opacity: 0;
         }
       }
 
@@ -169,6 +229,7 @@
         width: 100%;
 
         &-item {
+          will-change: transform;
           padding: 20px 0;
           text-align: center;
           border-top: 1px solid $gray;
@@ -179,8 +240,8 @@
 
           & h4 {
             font-weight: 350;
-            font-size: 80px;
-            line-height: 80px;
+            font-size: 48px;
+            line-height: 57.6px;
             letter-spacing: 0;
             margin-bottom: 10px;
           }
@@ -192,23 +253,41 @@
             letter-spacing: 0;
           }
         }
+
+        & .dot {
+          left: unset;
+          right: 0;
+          top: -30px;
+          transform: unset;
+        }
       }
     }
   }
 
   .press {
     margin-bottom: 75px;
+
     & .container {
-      max-width: 1283px;
+      max-width: 1315px;
     }
+
     &-content {
       & .sce-heading--secondary {
         margin-bottom: 40px;
+        position: relative;
       }
     }
+
     & .sce-btn {
       margin-top: 40px;
     }
+  }
+
+  & .dot {
+    position: absolute;
+    left: -75px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -219,7 +298,6 @@
       margin-bottom: 100px;
 
       &-content {
-        padding-left: 40px;
         padding-top: 310px;
       }
     }
@@ -238,6 +316,7 @@
         margin-top: 120px;
       }
     }
+
     .about-us {
       margin-bottom: 80px;
     }
@@ -291,9 +370,11 @@
 
     .about-us {
       margin-bottom: 60px;
+
       & .container {
         padding: 0 60px;
       }
+
       &--content {
         &_map {
           max-width: 440px;
@@ -316,6 +397,7 @@
         }
       }
     }
+
     .press {
       & .sce-btn {
         margin-top: 30px;
@@ -328,21 +410,27 @@
   .home {
     .about-us {
       padding: 60px 0;
+
       &--head {
-        margin-bottom: 50px;
+        margin-bottom: 130px;
       }
+
       & .container {
         padding: 0 20px;
       }
+
       &--content {
         flex-direction: column;
+
         &_map {
           max-width: 100%;
         }
+
         &_numbers {
           max-width: 100%;
         }
       }
+
       & .sce-heading--secondary {
         font-weight: 500;
         font-size: 24px;
@@ -351,6 +439,7 @@
         text-align: center;
       }
     }
+
     & .press {
       & .container {
         padding: 0 47px;
@@ -404,6 +493,7 @@
         }
       }
     }
+
     .press {
       &-content {
         .sce-heading--secondary {
@@ -414,7 +504,7 @@
   }
 }
 
-@media screen and (min-width: $mobile-screen) {
+@media screen and (min-width: $noutbook-small-screen) {
   .home {
     .what-we-do {
       &--link {
