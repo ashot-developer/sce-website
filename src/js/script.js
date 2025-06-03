@@ -193,7 +193,9 @@ if(document.querySelector('.header.home-header')) {
     ['dot7', 'dot8'],
     ['dot8', 'dot9'],
     ['dot9', 'dot10'],
-    ['dot10', 'dot11']
+    ['dot10', 'dot11'],
+    ['dot4-pr', 'dot14'],
+    ['dot4-pr', 'dot5-pr']
   ];
 
   if(window.innerWidth <= 835) {
@@ -220,8 +222,9 @@ if(document.querySelector('.header.home-header')) {
       const dotA = document.getElementById(idA);
       const dotB = document.getElementById(idB);
 
-      if(getComputedStyle(dotA).display === 'none' || getComputedStyle(dotB).display  === 'none') return;
       if (!dotA || !dotB) return;
+      if(getComputedStyle(dotA).display === 'none' || getComputedStyle(dotB).display  === 'none') return;
+      
 
       const rectA = dotA.getBoundingClientRect();
       const rectB = dotB.getBoundingClientRect();

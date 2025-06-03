@@ -1,13 +1,58 @@
-@@include('parts/header.html', {
-  "headerClass": "dark-header"
-})
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCE Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="../css/style.min.css" />
+</head>
+<body class="main-press-page">
+  <header id="main-header" class="header dark-header">
+    <div class="container">
+      <a href="" class="header-logo">
+        <img src="./assets/images/logo-white.svg" alt="">
+      </a>
+      <a href="" class="header-logo dark">
+        <span class="dot" id="dot1"></span>
+        <img src="./assets/images/logo-black.svg" alt="">
+      </a>
+      <nav class="header-menu">
+        <ul>
+          <li class="header-menu--item">
+            <a href="" class="header-menu--item_link">SERVICES</a>
+          </li>
+          <li class="header-menu--item">
+            <a href="" class="header-menu--item_link">ABOUT</a>
+          </li>
+          <li class="header-menu--item">
+            <a href="" class="header-menu--item_link">PRESS</a>
+          </li>
+        </ul>
+        <a href="" class="sce-btn sce-btn--primary">CONTACT US</a>
+      </nav>
+      <button class="header-toggle--btn">
+        <svg width="40" height="40" viewBox="0 0 40 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect class="line top" height="2" fill="white"/>
+          <rect class="line middle" x="10" y="10" height="2" fill="white"/>
+          <rect class="line bottom" x="20" y="20" height="2" fill="white"/>
+        </svg>
+      </button>
+    </div>
+  </header>
 
 <main class="press-page">
   <section class="press-section">
+    
     <div class="container">
+      <span class="dot" id="dot2"></span>
+      <span class="dot" id="dot3"></span>
       <h1 class="sce-heading--secondary">Press & Publications</h1>
       @@include('parts/press.html')
+      <span class="dot" id="dot4-pr"></span>
+      <span class="dot" id="dot5-pr"></span>
     </div>
+   
   </section>
 </main>
 
