@@ -193,9 +193,14 @@ if(document.querySelector('.header.home-header')) {
     ['dot7', 'dot8'],
     ['dot8', 'dot9'],
     ['dot9', 'dot10'],
-    ['dot10', 'dot11'],
-    ['dot12', 'dot14'],
+    ['dot10', 'dot11']
   ];
+
+  if(window.innerWidth <= 835) {
+    connections.push(['dot13', 'dot14']);
+  } else {
+    connections.push(['dot12', 'dot14'],)
+  }
 
 
   function updateLineLayerSize() {
@@ -215,6 +220,7 @@ if(document.querySelector('.header.home-header')) {
       const dotA = document.getElementById(idA);
       const dotB = document.getElementById(idB);
 
+      if(getComputedStyle(dotA).display === 'none' || getComputedStyle(dotB).display  === 'none') return;
       if (!dotA || !dotB) return;
 
       const rectA = dotA.getBoundingClientRect();
